@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingButton">
+        <attr name="android:enabled" />
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:textAllCaps" />
+        <attr name="android:textAlignment" />
+        <attr name="drawableStartCompat" />
+        <attr name="drawableTopCompat" />
+        <attr name="drawableEndCompat" />
+        <attr name="drawableBottomCompat" />
+        <attr name="android:drawablePadding" />
+        <attr name="drawableTint" />
+        <attr name="android:background" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="cornerRadius_topLeft" format="dimension" />
+        <attr name="cornerRadius_topRight" format="dimension" />
+        <attr name="cornerRadius_bottomRight" format="dimension" />
+        <attr name="cornerRadius_bottomLeft" format="dimension" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="stroke_color" format="color" />
+        <attr name="ripple_color" format="color" />
+        <attr name="loading" format="boolean" />
+        <attr name="bg_type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="dark" value="1" />
+            <enum name="customColor" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingImage">
+        <attr name="android:enabled" />
+        <attr name="android:tint" />
+        <attr name="android:src" />
+        <attr name="android:scaleType" />
+        <attr name="android:background" />
+        <attr name="corner_radius" />
+        <attr name="cornerRadius_topLeft" />
+        <attr name="cornerRadius_topRight" />
+        <attr name="cornerRadius_bottomRight" />
+        <attr name="cornerRadius_bottomLeft" />
+        <attr name="stroke_width" />
+        <attr name="stroke_color" />
+        <attr name="ripple_color" />
+        <attr name="loading" />
+        <attr name="is_clickable" format="boolean" />
+        <attr name="loading_size" format="enum">
+            <enum name="small" value="0" />
+            <enum name="medium" value="1" />
+            <enum name="large" value="2" />
+        </attr>
+        <attr name="type" format="enum">
+            <enum name="icon" value="0" />
+            <enum name="image" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

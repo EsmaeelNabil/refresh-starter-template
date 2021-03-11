@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    tools:background="@drawable/bg_rounded"
+    tools:context=".ui.customViews.LoadingButton">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_loading_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@drawable/loading_btn_text_selector"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="loading button" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi_loading_btn"
+        style="@style/AVLoadingIndicatorView.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:indicatorColor="@android:color/black"
+        app:indicatorName="BallScaleIndicator"
+        app:layout_constraintBottom_toBottomOf="@id/tv_loading_btn"
+        app:layout_constraintEnd_toEndOf="@id/tv_loading_btn"
+        app:layout_constraintStart_toStartOf="@id/tv_loading_btn"
+        app:layout_constraintTop_toTopOf="@id/tv_loading_btn" />
+</merge>

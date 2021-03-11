@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title_text_size_page_title3">@dimen/_35ssp</dimen>
+    <dimen name="title_text_size_page_title2">@dimen/_23ssp</dimen>
+    <dimen name="title_text_size_page_title2_5">@dimen/_26ssp</dimen>
+    <dimen name="title_text_size_page_title2_9">@dimen/_31ssp</dimen>
+
+    <dimen name="title_text_size_page_title1">@dimen/_20ssp</dimen>
+    <dimen name="title_text_size_page_title">@dimen/_18ssp</dimen>
+    <dimen name="title_text_size_page_title_small">@dimen/_17ssp</dimen>
+    <dimen name="title_text_size_large1">@dimen/_16ssp</dimen>
+    <dimen name="title_text_size_large2">@dimen/_15ssp</dimen>
+    <dimen name="title_text_size_medium">@dimen/_14ssp</dimen>
+    <dimen name="title_text_size_small">@dimen/_13ssp</dimen>
+
+    <dimen name="details_text_size_large">@dimen/_12ssp</dimen>
+    <dimen name="details_text_size_medium">@dimen/_10ssp</dimen>
+    <dimen name="details_text_size_small">@dimen/_9ssp</dimen>
+    <dimen name="details_text_size_tiny">@dimen/_7ssp</dimen>
+</resources>

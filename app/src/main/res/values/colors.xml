@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F9F9F9</color>
+
+    <color name="colorPrimaryMedium">#FAA294</color>
+    <color name="colorPrimaryLight">#FEEFE3</color>
+    <color name="colorPrimaryLighter">#FEF8EC</color>
+    <color name="colorDisable">#BABABA</color>
+    <color name="colorLightGray">#CDCDCD</color>
+    <color name="colorGray">#8C8C8C</color>
+    <color name="colorGrayLight">#DFDFDF</color>
+    <color name="colorGray2">#EEEEEE</color>
+    <color name="colorDark">#191919</color>
+    <color name="colorLightGrey">#E5E5EA</color>
+    <color name="colorOrange">#F5EEE6</color>
+    <color name="colorPaleGold">#EDA258</color>
+    <color name="babyLightBlue">#00B1F2</color>
+    <color name="colorLightGreen">#78D868</color>
+    <color name="colorLightRed">#F8EDEB</color>
+
+    <color name="colorGrey">#F4F4F4</color>
+    <color name="colorCoffee">#FAFAFA</color>
+    <color name="colorDark2">#232122</color>
+
+    <color name="colorGreyMedium">#8C959F</color>
+    <color name="colorDark30Alpha">#3A232122</color>
+    <color name="colorBlack10Alpha">#1A000000</color>
+    <color name="colorBlack25Alpha">#40000000</color>
+    <color name="colorBlack50Alpha">#5A000000</color>
+    <color name="colorLight">#E5E5E5</color>
+    <color name="colorDarkGrey">#1A232122</color>
+    <color name="colorMediumGrey">#8E8D8D</color>
+    <color name="colorVeryLightGrey">#F8F8F8</color>
+    <color name="green">@android:color/holo_green_light</color>
+    <color name="colorGrayText">#bcbbbc</color>
+    <color name="colorDarkGray">#929192</color>
+    <color name="colorDarkTrans">#66000000</color>
+    <color name="colorLighterGrey">#FAF7F3</color>
+    <color name="colorGold">#FFBA00</color>
+    <color name="colorYellow">#F2C94C</color>
+    <color name="colorYellowDark">#F5A523</color>
+    <color name="alphabet_text_selected_color">#929192</color>
+    <color name="alphabet_text_color">#bcbbbc</color>
+    <color name="alphabet_background_color">#ffffff</color>
+    <color name="alphabet_background_border_color">#00ffffff</color>
+    <color name="trans_status_bar">#00000000</color>
+    <color name="colorRose">#F5EEE6</color>
+    <color name="colorOrdersCompleted">#1EBC3D</color>
+
+    <color name="colorOrdersUnCompleted">#E6E6E6</color>
+
+</resources>

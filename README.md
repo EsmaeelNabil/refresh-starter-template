@@ -1,4 +1,4 @@
- ### Main and Latest Branch is `init` branch in `Tue 16 Feb`
+ ### Main and Latest Branch is `Master` branch in `Tue 16 Feb`
 
  - ##### `TO ADD NEW SECRETS ` put them in `keys.properties` file that is located in `ROOT` project folder
  - ##### `AND ADD KEYS, VALUES` in `build.gradle.kts` 

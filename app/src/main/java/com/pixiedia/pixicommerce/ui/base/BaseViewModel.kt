@@ -13,7 +13,7 @@ abstract class BaseViewModel(private val contextProvider: ContextProviders) : Vi
 
     private val internalState = MutableStateFlow<ViewState>(ViewState.Initial)
 
-    fun setState(state: ViewState) {
+    protected fun setState(state: ViewState) {
         internalState.value = state
     }
 
@@ -23,15 +23,9 @@ abstract class BaseViewModel(private val contextProvider: ContextProviders) : Vi
         internalState.value = ViewState.Error(throwable.message)
     }
 
-    fun launchBlock(
-        emitDefaultLoading: Boolean = false,
-        unitLoading: ViewState = ViewState.Initial,
-        block: suspend CoroutineScope.() -> Unit
-    ) {
-        // emits either default loading or specific component loading if default loading is false
-        if (emitDefaultLoading)
-            setState(if (emitDefaultLoading) ViewState.DefaultLoading else unitLoading)
-
+    fun launchBlock(emitLoading: Boolean = true, block: suspend CoroutineScope.() -> Unit) {
+        if (emitLoading)
+            setState(ViewState.Loading)
         viewModelScope.launch(contextProvider.Main + coroutineExceptionHandler) {
             block.invoke(this)
         }

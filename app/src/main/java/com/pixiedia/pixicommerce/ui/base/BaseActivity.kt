@@ -2,7 +2,6 @@ package com.pixiedia.pixicommerce.ui.base
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.lifecycleScope
@@ -67,7 +66,7 @@ abstract class BaseActivityWithBusiness<T : ViewDataBinding, VM : BaseViewModel>
 
     private fun baseRender(state: ViewState) {
         when (state) {
-            is ViewState.DefaultLoading -> showLoading()
+            is ViewState.Loading -> showLoading()
             is ViewState.Initial -> hideLoading()
             is ViewState.Error -> showError(state.error)
             else -> {

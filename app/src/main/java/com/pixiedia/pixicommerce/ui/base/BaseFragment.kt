@@ -60,7 +60,7 @@ abstract class BaseFragment<T : ViewDataBinding, VM : BaseViewModel>(private val
     private fun baseRender(state: ViewState) {
         when (state) {
             is ViewState.Initial -> hideLoading()
-            is ViewState.DefaultLoading -> showLoading()
+            is ViewState.Loading -> showLoading()
             is ViewState.Error -> showError(state.error)
             else -> {
                 hideLoading()

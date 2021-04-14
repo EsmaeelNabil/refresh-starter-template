@@ -24,6 +24,7 @@ buildConfigField(stringType, "BASE_URL", props["base_url"] as String)
 
 ---
 ###### to add new `Dependencies` you two ways:
+- You need to change/remove [google-service.json]()
 - do it like this [Video](https://youtu.be/VhYERonB8co)
 - or add the dependency in `buildSrc/Libs` like this
 ```const val security_crypto: String = "androidx.security:security-crypto:_"```

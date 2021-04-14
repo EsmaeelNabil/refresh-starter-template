@@ -3,6 +3,9 @@ object Libs {
     // sharedPrefs alternative
     const val security_crypto: String = "androidx.security:security-crypto:_"
 
+    const val web_view: String = "com.github.delight-im:Android-AdvancedWebView:_"
+    const val formValidation: String = "com.afollestad:vvalidator:_"
+
     //Loading
     const val aviLoader: String = "com.wang.avi:library:_"
     const val localization: String = "com.akexorcist:localization:_"

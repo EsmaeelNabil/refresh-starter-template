@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">graphspresso</string>
+    <string name="invalid_url">invalid url</string>
 </resources>

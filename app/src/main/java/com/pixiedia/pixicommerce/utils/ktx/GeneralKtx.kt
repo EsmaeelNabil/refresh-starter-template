@@ -5,6 +5,8 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.navigation.fragment.NavHostFragment
 import coil.Coil
 import coil.request.CachePolicy
 import coil.request.ErrorResult
@@ -74,4 +76,18 @@ fun Activity.getBitmapFromUrl(
     onResponse: (isSuccessful: Boolean, error: String, bitmap: Bitmap?) -> Unit,
 ) {
     getBitmapFromUrlWithCoil(applicationContext, url, onStart, onResponse)
+}
+
+fun FragmentActivity.passTo(func: (Fragment) -> Unit) {
+    doSafely {
+        val hostFragment = supportFragmentManager.fragments[0] as NavHostFragment
+        hostFragment?.let {
+            val fragmentsList: List<Fragment> = hostFragment.childFragmentManager.fragments
+            if (!fragmentsList.isNullOrEmpty()) {
+                for (fragment in fragmentsList) {
+                    func(fragment)
+                }
+            }
+        }
+    }
 }

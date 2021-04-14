@@ -7,6 +7,7 @@ plugins {
     kotlin("kapt")
     id("androidx.navigation.safeargs.kotlin")
     id("com.google.gms.google-services")
+    id("org.jlleitschuh.gradle.ktlint") version "9.4.0"
 }
 
 // retrieve Api keys.
@@ -67,6 +68,13 @@ android {
 
     buildFeatures {
         dataBinding = true
+    }
+
+    bundle {
+        language {
+            // We want to be able to switch the locale at runtime using AppLocale!
+            enableSplit = false
+        }
     }
 
     packagingOptions {
@@ -134,12 +142,17 @@ dependencies {
     implementation(Firebase.analytics)
     implementation(Firebase.dynamicLinks)
 
-
     // Room
     implementation(AndroidX.room.runtime)
     implementation(AndroidX.room.migration)
     implementation(AndroidX.room.ktx)
     kapt(AndroidX.room.compiler)
+
+    // Form Validation
+    implementation(Libs.formValidation)
+
+    // webView
+    implementation(Libs.web_view)
 
     //App state
     implementation(Libs.State.appState)

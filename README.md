@@ -1,4 +1,6 @@
- ### Main and Latest Branch is `Master` branch in `Tue 16 Feb`
+ #### Branches
+ - [Hilt](https://github.com/EsmaeelNabil/refresh-starter-template/blob/hilt/README.md)
+ - [Koin](https://github.com/EsmaeelNabil/refresh-starter-template/blob/koin/README.md)
 
  - ##### `TO ADD NEW SECRETS ` put them in `keys.properties` file that is located in `ROOT` project folder
  - ##### `AND ADD KEYS, VALUES` in `build.gradle.kts` 

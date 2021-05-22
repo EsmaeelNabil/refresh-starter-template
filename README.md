@@ -1,30 +1,17 @@
- ### Main and Latest Branch is `Master` branch in `Tue 16 Feb`
-
- - ##### `TO ADD NEW SECRETS ` put them in `keys.properties` file that is located in `ROOT` project folder
- - ##### `AND ADD KEYS, VALUES` in `build.gradle.kts` 
-
-``` json
-token_header_name="Authorization"
-base_url="https://api.github.com/graphql"
-github_token="bearer Github_Personal_Access_Token"
-```
+ #####  ( MVVM + MVI's States ) - Usecases Approach - Room Caching - Secrets - Dependency invertion & injection
 
 
-``` groovy
-buildConfigField(stringType, "BASE_URL", props["base_url"] as String)
-```
+### Features
+* [Hiding secretKeys in properties Files using gradle secrets](https://github.com/google/secrets-gradle-plugin)
+* [Dependencies Versions & update plugin](https://jmfayard.github.io/refreshVersions/)
+* [Dagger-Hilt](https://dagger.dev/hilt/gradle-setup)
+* [Usecasesapproach](https://proandroiddev.com/why-you-need-use-cases-interactors-142e8a6fe576)
+* [Dependecy inversion](https://medium.com/@kedren.villena/simplifying-dependency-inversion-principle-dip-59228122649a)
+ and [SOILID](https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898) 
+
 
 ---
-
-| Feature             |  Details                         |
-:---------------------|:----------------------------------
-|[Hiding secretKeys in properties Files]()|
-|[Github Actions]()|
-|[Dependencies Versions & update plugin]()|
-
----
-###### to add new `Dependencies` you two ways:
-- You need to change/remove [google-service.json]()
+###### to add new `Dependencies` you have two methods :
 - do it like this [Video](https://youtu.be/VhYERonB8co)
 - or add the dependency in `buildSrc/Libs` like this
 ```const val security_crypto: String = "androidx.security:security-crypto:_"```
@@ -35,3 +22,10 @@ buildConfigField(stringType, "BASE_URL", props["base_url"] as String)
 ./gradlew refreshVersions
 ```
 ##### latest versions will be in [versions.properties]() to select from.
+
+###### `TO ADD NEW SECRETS ` put them in `secrets.properties` file that is located in `ROOT` project folder
+
+``` json
+token_header_name="Authorization"
+base_url="https://api.github.com/"
+```

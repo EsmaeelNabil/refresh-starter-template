@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pixiedia.pixicommerce">
+    package="com.esmaeel.usecases">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.pixiedia.pixicommerce.AppInstance"
-        android:allowBackup="true"
+        android:name="com.esmaeel.usecases.AppInstance"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Graphspresso">
-        <activity android:name="com.pixiedia.pixicommerce.ui.main.onBoard.OnBoardActivity" />
 
-        <activity android:name="com.pixiedia.pixicommerce.ui.main.splash.SplashActivity">
+        <activity android:name="com.esmaeel.usecases.ui.userFeatures.userList.UsersActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

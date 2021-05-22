@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">graphspresso</string>
+    <string name="app_name">usecases</string>
     <string name="invalid_url">invalid url</string>
+    <string name="error">error</string>
+    <string name="internet_error_message">internet_error_message</string>
+    <string name="time_out_message">time out message</string>
 </resources>

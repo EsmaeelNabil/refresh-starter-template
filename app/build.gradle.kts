@@ -5,28 +5,25 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-    id("androidx.navigation.safeargs.kotlin")
-    id("com.google.gms.google-services")
+    id("dagger.hilt.android.plugin")
     id("org.jlleitschuh.gradle.ktlint") version "9.4.0"
+    id("com.google.secrets_gradle_plugin") version "0.6"
 }
 
-// retrieve Api keys.
-val keystoreProperties = rootProject.file("keys.properties")
-val props = Properties()
-if (keystoreProperties.exists()) {
-    props.load(FileInputStream(keystoreProperties))
-} else {
-    props["ADMIN_USERNAME"] = "none"
-    props["ADMIN_PASSWORD"] = "none"
+// 2. Optionally configure the plugin
+secrets {
+    // Optionally specify a different file name containing your secrets.
+    // The plugin defaults to "local.properties"
+    propertiesFileName = "secrets.properties"
 }
 
 android {
     val stringType = "String"
     compileSdkVersion(30)
-    buildToolsVersion("30.0.2")
+    buildToolsVersion("30.0.3")
 
     defaultConfig {
-        applicationId = "com.pixiedia.pixicommerce"
+        applicationId = "com.esmaeel.usecases"
         minSdkVersion(23)
         targetSdkVersion(30)
         versionCode = 1
@@ -38,11 +35,6 @@ android {
 
         getByName("debug") {
             // you can use this with different values inside buildTypes.
-            buildConfigField(stringType, "ADMIN_USERNAME", props["adminUsername"] as String)
-            buildConfigField(stringType, "ADMIN_PASSWORD", props["adminPassword"] as String)
-            buildConfigField(stringType, "BASE_URL", props["base_url"] as String)
-            buildConfigField(stringType, "TOKEN_HEADER_NAME", props["token_header_name"] as String)
-            buildConfigField(stringType, "DATABASE_NAME", props["dp_name"] as String)
             isDebuggable = true
         }
 
@@ -114,17 +106,8 @@ dependencies {
     implementation(KotlinX.coroutines.android)
     implementation(KotlinX.coroutines.playServices)
 
+    implementation(Libs.formValidation)
     implementation(COIL)
-    implementation(COIL.gif)
-
-    // sharedPrefs alternative
-    implementation(Libs.security_crypto)
-
-    // Koin
-    implementation(Libs.koin.koin_android)
-    implementation(Libs.koin.koin_android_viewModel)
-    implementation(Libs.koin.koin_androidx_scope)
-    implementation(Libs.koin.koin_android_ext)
 
     //Loading
     implementation(Libs.aviLoader)
@@ -136,26 +119,17 @@ dependencies {
     implementation(Libs.dimensions.sdp)
     implementation(Libs.dimensions.ssp)
 
-    //firebase
-    implementation(platform(Firebase.bom))
-    implementation(Firebase.cloudFirestoreKtx)
-    implementation(Firebase.analytics)
-    implementation(Firebase.dynamicLinks)
-
     // Room
     implementation(AndroidX.room.runtime)
     implementation(AndroidX.room.migration)
     implementation(AndroidX.room.ktx)
     kapt(AndroidX.room.compiler)
 
-    // Form Validation
-    implementation(Libs.formValidation)
 
-    // webView
-    implementation(Libs.web_view)
-
-    //App state
-    implementation(Libs.State.appState)
+    // Dagger-Hilt
+    implementation(Google.dagger.hilt.android)
+    kapt(Google.dagger.hilt.android.compiler)
+    testImplementation(Google.dagger.hilt.android.testing)
 
     // Testing
     implementation(AndroidX.test.core)

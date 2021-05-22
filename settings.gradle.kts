@@ -8,4 +8,4 @@ buildscript {
 bootstrapRefreshVersions()
 
 include(":app")
-rootProject.name = "new-culture"
+rootProject.name = "usecase"
